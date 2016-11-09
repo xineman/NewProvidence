@@ -2,6 +2,12 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: #F7F9F8;
+    EEF0F3 padding: 0;
+    margin: 0;
+}
+
 .nav-list {
     display: inline-block;
     padding: 0;
@@ -11,14 +17,14 @@ a {
 
 .nav-list li {
     display: inline;
-    padding: 15px;
+    padding: 20px;
 }
 
 #main-nav {
-    padding: 44px 0;
     font-size: 16px;
     width: 1170px;
-    margin: auto;
+    margin: 44px auto;
+    padding: 10px 0;
     position: relative;
 }
 
@@ -47,12 +53,33 @@ a {
     color: #1b1c1e;
     text-decoration: none;
     position: absolute;
-    left: -20px;
+    left: 0px;
+}
+
+#what-happens {
+    margin: 120px 0;
+    height: 800px;
+    background-image: url('../images/banner_background.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1170px;
 }
 
 #page-title {
-  color: #26272d;
-  text-align: center;
-  font-size: 42pt;
-  padding: 20px;
+    color: #26272d;
+    text-align: center;
+    font-size: 42pt;
+    margin: auto;
+}
+
+#what-happens p {
+    margin: 0;
+    padding: 40px 170px;
+    font-size: 16pt;
+    text-align: center;
+    color: #8c8f94;
 }
