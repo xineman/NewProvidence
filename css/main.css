@@ -3,9 +3,10 @@ a {
 }
 
 body {
-    background-color: #F7F9F8;
-    EEF0F3 padding: 0;
+    background-color: #FFF;
+    padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-list {
@@ -57,11 +58,15 @@ body {
 }
 
 #what-happens {
-    margin: 120px 0;
+    margin: 120px 0 0;
     height: 800px;
     background-image: url('../images/banner_background.jpg');
     background-position: center;
     background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    overflow: hidden;
 }
 
 .container {
@@ -74,12 +79,61 @@ body {
     text-align: center;
     font-size: 42pt;
     margin: auto;
+    padding: 20px;
 }
 
 #what-happens p {
     margin: 0;
-    padding: 40px 170px;
+    padding: 0 170px;
     font-size: 16pt;
     text-align: center;
     color: #8c8f94;
+}
+
+#watch-btn {
+    border: solid 1px #DADCDE;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    width: 205px;
+    height: 50px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.btn-content {
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+    color: #26272D;
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+}
+
+.center-image {
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#features {
+    padding: 125px 0;
+    position: relative;
+    border: solid 1px yellow;
+}
+
+.feature {
+  width: 50%;
+  display: block;
+  position: absolute;
+  border: solid 1px;
+}
+
+#left-feature {
+  left: 0px;
+}
+
+#right-feature {
+  right: 0px;
 }
