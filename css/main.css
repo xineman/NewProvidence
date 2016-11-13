@@ -2,10 +2,24 @@ a {
     text-decoration: none;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: #8c8f94;
+    padding: 10px 0;
+    line-height: 150%;
+    font-size: 12pt;
+}
+
+h2 {
+    font-size: 22pt;
+}
+
 body {
     background-color: #FFF;
-    padding: 0;
-    margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,9 +38,11 @@ body {
 #main-nav {
     font-size: 16px;
     width: 1170px;
-    margin: 44px auto;
-    padding: 10px 0;
-    position: relative;
+    margin: 0 auto;
+    padding: 54px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 #main-menu {
@@ -58,7 +74,8 @@ body {
 }
 
 #what-happens {
-    margin: 120px 0 0;
+    margin: 0 auto;
+    padding: 200px 0 0;
     height: 800px;
     background-image: url('../images/banner_background.jpg');
     background-position: center;
@@ -78,6 +95,7 @@ body {
     color: #26272d;
     text-align: center;
     font-size: 42pt;
+    font-weight: 300;
     margin: auto;
     padding: 20px;
 }
@@ -87,10 +105,9 @@ body {
     padding: 0 170px;
     font-size: 16pt;
     text-align: center;
-    color: #8c8f94;
 }
 
-#watch-btn {
+.white-btn {
     border: solid 1px #DADCDE;
     border-radius: 50px;
     display: block;
@@ -118,22 +135,72 @@ body {
 }
 
 #features {
-    padding: 125px 0;
-    position: relative;
-    border: solid 1px yellow;
+    width: 1170px;
+    margin: auto;
+    padding: 120px 0;
+    display: flex;
 }
 
 .feature {
-  width: 50%;
-  display: block;
-  position: absolute;
-  border: solid 1px;
+    width: 50%;
+    padding: 0 35px;
 }
 
-#left-feature {
-  left: 0px;
+.feature i {
+    padding: 12px 0;
+    color: #267DF4;
+    font-size: 32pt;
 }
 
-#right-feature {
-  right: 0px;
+.feature h3 {
+    padding: 12px 0;
+    color: #26272D;
+    font-size: 18pt;
+    font-weight: 300;
+}
+
+hr {
+    width: 1170px;
+    height: 1px;
+    border: 0;
+    margin: auto;
+    color: #F4F4F4;
+    background-color: #F4F4F4;
+}
+
+#protected-day {
+    width: 1170px;
+    height: 800px;
+    margin: auto;
+    padding: 125px 0;
+    position: relative;
+}
+
+#protected-device {
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+}
+
+#protected-text {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 470px;
+    padding: 200px 35px;
+}
+
+.padding-block {
+    padding: 50px 0;
+}
+
+.learn-btn {
+    border: solid 1px #DADCDE;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+    width: 140px;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
 }
