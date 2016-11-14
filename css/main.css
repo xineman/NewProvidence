@@ -18,59 +18,55 @@ h2 {
     font-size: 22pt;
 }
 
+h1, h2, h3 {
+    color: #26272D;
+}
+
+h6 {
+    font-weight: 400;
+}
+
 body {
+    margin: 0;
     background-color: #FFF;
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-list {
-    display: inline-block;
-    padding: 0;
-    margin: 0 auto;
-    width: auto;
-}
-
 .nav-list li {
     display: inline;
-    padding: 20px;
+    padding: 0 10px;
 }
 
-#main-nav {
-    font-size: 16px;
-    width: 1170px;
-    margin: 0 auto;
-    padding: 54px 0;
-    position: fixed;
-    left: 0;
-    right: 0;
+.nav-list {
+    display: block;
+    width: 300px;
 }
 
 #main-menu {
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    padding: 44px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: transparent;
+    transition: background-color 1s;
+    transition: padding 1s;
+}
+
+#main-nav {
+    font-size: 12pt;
+    width: 1170px;
+    margin: 0 auto;
     text-align: center;
-}
-
-#left {
-    float: left;
-}
-
-#right {
-    float: right;
-}
-
-#logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin: auto 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #navigation-btn {
     color: #1b1c1e;
     text-decoration: none;
-    position: absolute;
-    left: 0px;
 }
 
 #what-happens {
@@ -92,7 +88,6 @@ body {
 }
 
 #page-title {
-    color: #26272d;
     text-align: center;
     font-size: 42pt;
     font-weight: 300;
@@ -101,31 +96,58 @@ body {
 }
 
 #what-happens p {
-    margin: 0;
     padding: 0 170px;
     font-size: 16pt;
     text-align: center;
 }
 
-.white-btn {
+.just-btn {
     border: solid 1px #DADCDE;
-    border-radius: 50px;
-    display: block;
+    border-radius: 25px;
+    display: inline-block;
     text-align: center;
     width: 205px;
-    height: 50px;
-    margin: 50px auto;
-    position: relative;
+    height: 42px;
+    margin: 0 auto;
+    line-height: 42px;
 }
 
 .btn-content {
     display: inline-block;
+    font-size: 12pt;
     padding: 0 5px;
-    margin: 0;
-    color: #26272D;
+    margin: auto;
+}
+
+#watch-btn {
     height: 50px;
+    border-radius: 50px;
+    margin: 50px auto;
     line-height: 50px;
-    white-space: nowrap;
+    display: block;
+}
+
+#get-app-btn {
+    width: 132px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #267DF4;
+    border: 0px;
+    color: #fff;
+}
+
+#learn-btn {
+    width: 140px;
+    margin: 0 10px;
+}
+
+#hack-btn {
+    margin-right: 10px;
+    background-color: #267DF4;
+    border: 0px;
+    color: #fff;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 .center-image {
@@ -154,7 +176,6 @@ body {
 
 .feature h3 {
     padding: 12px 0;
-    color: #26272D;
     font-size: 18pt;
     font-weight: 300;
 }
@@ -180,6 +201,7 @@ hr {
     display: inline-block;
     position: absolute;
     right: 50%;
+    z-index: 1;
 }
 
 #protected-text {
@@ -191,16 +213,5 @@ hr {
 }
 
 .padding-block {
-    padding: 50px 0;
-}
-
-.learn-btn {
-    border: solid 1px #DADCDE;
-    border-radius: 50px;
-    display: inline-block;
-    text-align: center;
-    width: 140px;
-    height: 50px;
-    margin: 0 10px;
-    position: relative;
+    padding: 40px 0;
 }
