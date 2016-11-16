@@ -22,21 +22,34 @@ h2 {
     font-size: 22pt;
 }
 
+h4 {
+    font-size: 18pt;
+}
+
 h1, h2, h3, h5, a {
     color: #26272D;
 }
 
-h6, h2, h5 {
+h6, h2, h4, h5 {
     font-weight: 400;
 }
+
+h5.bolder {
+    font-weight: 600;
+}
+
 strong {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 body {
     margin: 0;
     background-color: #FFF;
     font-family: 'Roboto', sans-serif;
+}
+
+input:focus {
+    outline: none;
 }
 
 .container {
@@ -234,10 +247,6 @@ hr {
     width: 500px;
 }
 
-#everywhere-text h5 {
-  font-weight: 600;
-}
-
 #everywhere-map {
     display: inline-block;
     position: absolute;
@@ -270,7 +279,7 @@ hr {
 
 .section-title {
     text-align: center;
-    margin: 50px auto;
+    margin: 48px auto;
 }
 
 .blue-line {
@@ -278,19 +287,20 @@ hr {
     height: 2px;
     color: #267DF4;
     background-color: #267DF4;
-    margin: 0 auto 25px;
+    margin: 0 auto;
 }
 
 .section-subtitle {
     text-align: center;
     color: #A9AAB1;
+    margin: 43px 0;
 }
 
 #interface-images {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 0 150px;
+    padding-bottom: 100px;
 }
 
 .interface-img {
@@ -298,21 +308,166 @@ hr {
     box-shadow: 2px 2px 15px #888888;
 }
 
-#email-form {
-    display: block;
+#form-container {
+    position: relative;
     margin: 0 auto;
     margin-bottom: 50px;
     height: 50px;
     width: 500px;
+}
+
+#email-form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 294px;
     border-radius: 25px;
     border: solid 1px #DADCDE;
     background-color: inherit;
-    padding: 0 26px;
+    padding: 0 180px 0 26px;
     font-size: 16px;
+}
+
+#submit-btn {
+    position: absolute;
+    right: 0;
+    margin: 5px 3px 5px 0;
+    width: 164px;
+    background-color: #6FC754;
+    border: 0px;
+    color: #fff;
+}
+
+#download-text {
+    margin: 0;
 }
 
 #app-download {
     display: block;
     margin: 15px auto;
-    border-radius: 25px;
+    border-radius: 50px;
+    height: 50px;
+    width: 180px;
+    background-color: #000;
+    background-image: url('../images/app-store-download.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#slider {
+    /*height: 750px;*/
+}
+
+.slider-container {
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-images {
+    width: 570px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-arrow {
+    color: #D4D4D5;
+    height: 42px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slider-image {
+    border-radius: 100px;
+    box-shadow: 40px 40px 100px #9C9C9C;
+    cursor: pointer;
+    opacity: 0.4;
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+    transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slider-image.active-image {
+    opacity: 1;
+    width: 130px;
+    height: 130px;
+}
+
+.slider-item-box {
+    width: 570px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-item-text {
+    position: absolute;
+    margin: auto;
+    display: block;
+    width: 570px;
+    text-align: center;
+}
+
+.slider-item-text.active {
+    left: 0;
+    transition: 0.5s;
+}
+
+.animated {
+    transition: 0.5s;
+}
+
+.slider-item-text h4 {
+    padding: 25px 0;
+}
+
+.slider-item-text h5 {
+    padding: 50px 0;
+}
+
+.slider-star {
+    color: #F2BC3B;
+}
+
+.slide {
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes slide {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }

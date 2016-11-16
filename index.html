@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
     <title>My Providence</title>
 </head>
 
@@ -90,7 +91,7 @@
                     Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.
                 </p>
                 <div class="padding-block">
-                    <h5>PARTNERS</h5>
+                    <h5 class="bolder">PARTNERS</h5>
                     <img class="partner-image" src="images/dropbox.png" />
                     <img class="partner-image" src="images/evernote.png" />
                 </div>
@@ -112,11 +113,54 @@
             </div>
             <h5 class="section-subtitle"><strong>NEW</strong>PROVIDENCE</h5>
             <h2 class="section-title">Get it to your smartphone</h2>
-            <input id="email-form" type="email" placeholder="Your email here"/>
-            <h5 class="section-subtitle">OR DOWNLOAD FROM</h5>
-            <img id="app-download" src="images/app-store-download.png" />
+            <div id="form-container">
+                <input id="email-form" type="email" placeholder="Your email here" />
+                <a id="submit-btn" class="just-btn" href="#">
+                    <h6 class="btn-content">Send Invite</h6>
+                    <i class="fa fa-arrow-right btn-content" aria-hidden="true"></i></a>
+                </a>
+            </div>
+            <h5 id="download-text" class="section-subtitle">OR DOWNLOAD FROM</h5>
+            <a id="app-download" class="just-btn" href="#"></a>
         </section>
     </div>
+    <section id="slider" class="container">
+        <div class="slider-container">
+            <i class="fa fa-angle-left fa-4x slider-arrow" aria-hidden="true" onclick="plusSlide(-1)"></i>
+            <div class="slider-images">
+                <img class="slider-image active-image" src="images/user1.jpg" onclick="showSlide(1)" />
+                <img class="slider-image" src="images/user2.jpg" onclick="showSlide(2)" />
+                <img class="slider-image" src="images/user3.jpg" onclick="showSlide(3)" />
+            </div>
+            <i class="fa fa-angle-right fa-4x slider-arrow" aria-hidden="true" onclick="plusSlide(1)"></i>
+        </div>
+        <div class="slider-item-box">
+            <div class="slider-item-text animated active">
+                <h4>New Providence is the great UI kit</h4>
+                <p>
+                    "Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door."
+                </p>
+                <i class="fa fa-star fa-lg slider-star" aria-hidden="true"></i>
+                <h5 class="bolder">CAMERON DOWMAN</h5>
+            </div>
+            <div class="slider-item-text animated" style="left: 570px;">
+                <h4>New Providence is the great UI kit</h4>
+                <p>
+                    "Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door."
+                </p>
+                <i class="fa fa-star fa-lg slider-star" aria-hidden="true"></i>
+                <h5 class="bolder">MAN</h5>
+            </div>
+            <div class="slider-item-text animated" style="left: 570px;">
+                <h4>New Providence is the great UI kit</h4>
+                <p>
+                    "Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door."
+                </p>
+                <i class="fa fa-star fa-lg slider-star" aria-hidden="true"></i>
+                <h5 class="bolder">Girl 2</h5>
+            </div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 
