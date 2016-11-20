@@ -20,7 +20,7 @@ function showSlide(n) {
     document.getElementsByClassName("active-image")[0].classList.remove("active-image");
     texts[currentSlide - 1].classList.remove("active");
     for (var i = 0; i < texts.length; i++) {
-      texts[i].classList.remove("animated");
+        texts[i].classList.remove("animated");
     }
     texts[currentSlide - 1].classList.add("animated");
     texts[n - 1].classList.add("animated");
@@ -90,5 +90,17 @@ function plusSlide(n) {
             slides[currentSlide - 2].classList.add("active-image");
             --currentSlide;
         }
+    }
+}
+
+function switchPlan(plan) {
+    if (plan == 0) {
+        document.getElementById("switcher").className = "leftside";
+        document.getElementsByClassName("plan-option")[0].classList.add("selected-plan");
+        document.getElementsByClassName("plan-option")[1].classList.remove("selected-plan");
+    } else {
+        document.getElementById("switcher").className = "rightside";
+        document.getElementsByClassName("plan-option")[1].classList.add("selected-plan");
+        document.getElementsByClassName("plan-option")[0].classList.remove("selected-plan");
     }
 }

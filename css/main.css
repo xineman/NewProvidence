@@ -84,7 +84,7 @@ input:focus {
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 999;
 }
 
 #main-nav {
@@ -412,7 +412,7 @@ hr {
 
 .slider-item-box {
     width: 570px;
-    height: 400px;
+    height: 330px;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -447,27 +447,283 @@ hr {
     color: #F2BC3B;
 }
 
-.slide {
-    -webkit-animation-name: slide;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+#choose-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px;
 }
 
-@-webkit-keyframes slide {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+#plan-text {
+    width: 370px;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+#plan-options {
+    width: 670px;
+    display: flex;
+    align-items: center;
+}
+
+#switcher-box {
+    width: 258px;
+    height: 48px;
+    border: solid 1px #CECFD0;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    z-index: 3;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#switcher {
+    position: absolute;
+    width: 124px;
+    height: 42px;
+    background-color: #fff;
+    border: 1px;
+    border-radius: 25px;
+    z-index: 2;
+    box-shadow: 3px 3px 40px #9C9C9C;
+}
+
+.leftside {
+    left: 3px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.rightside {
+    left: 131px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+#you-are {
+    font-size: 10pt;
+    padding-bottom: 10px;
+}
+
+.plan-option {
+    display: inline-block;
+    z-index: 3;
+    width: 129px;
+    height: 42px;
+    padding: 0;
+    text-align: center;
+}
+
+.plan-option p {
+    font-size: 10pt;
+    display: block;
+    margin: auto;
+    color: #A1A2A4;
+    font-weight: 700;
+}
+
+.selected-plan p {
+    color: #26292C;
+}
+
+#lets-talk {
+    font-size: 10pt;
+    padding: 0;
+}
+
+#lets-talk a {
+    text-decoration: underline;
+    color: #267DF4;
+    font-weight: 700;
+}
+
+.f-plan {
+    width: 340px;
+    height: 550px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 40px #9C9C9C;
+    z-index: 3;
+    position: relative;
+}
+
+.pro-plan {
+    width: 330px;
+    height: 512px;
+    text-align: center;
+    background-color: #EBEBED;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 10px;
+}
+
+.check-icon {
+    display: block;
+    padding: 0 5px;
+    color: #6FC754;
+}
+
+.plan-price {
+    width: 63px;
+    height: 28px;
+    border: solid 1px #D4D4D5;
+    border-radius: 15px;
+    margin: 25px auto;
+    line-height: 28px;
+}
+
+#plan-options p {
+    padding: 20px;
+}
+
+.f-plan .plan-title {
+    padding-top: 68px;
+}
+
+.pro-plan .plan-title {
+    padding-top: 49px;
+}
+
+#get-started-btn {
+    background-color: #267DF4;
+    border: 0px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+}
+
+#make-pro-btn {
+    border: solid 1px #267DF4;
+    color: #267DF4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 51px;
+}
+
+#newsletters {
+    text-align: center;
+    margin: 75px auto;
+}
+
+#newsletters p {
+    font-size: 10pt;
+}
+
+#newsletter-container {
+    position: relative;
+    margin: 0 auto 10px;
+    height: 50px;
+    width: 570px;
+}
+
+#newsletter-form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 394px;
+    border-radius: 25px;
+    border: solid 1px #DADCDE;
+    background-color: inherit;
+    padding: 0 150px 0 26px;
+    font-size: 16px;
+}
+
+#subscribe-btn {
+    position: absolute;
+    right: 0;
+    margin: 5px 3px 5px 0;
+    width: 134px;
+    background-color: #6FC754;
+    border: 0px;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 0;
+}
+
+#footer-text {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+#footer-text p {
+    font-size: 10pt;
+    margin: 15px 0;
+}
+
+#footer-img {
+    display: block;
+}
+
+#footer-download {
+    display: block;
+    border-radius: 10px;
+    width: 140px;
+    margin: 0;
+    background-color: #000;
+    background-image: url('../images/app-store-download.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.socials {
+    padding-top: 25px;
+}
+
+.socials li {
+    color: #BDBEC0;
+    display: inline;
+    padding-right: 20px;
+}
+
+#footer-lists {
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+}
+
+.footer-list {
+    width: 170px;
+}
+
+.footer-list li {
+    padding-bottom: 20px;
+    font-size: 11pt;
+}
+
+.footer-list li a {
+    color: #8c8f94;
+}
+.footer-list li a:hover {
+    color: #000;
+}
+
+.list-header {
+    font-weight: 700;
 }
