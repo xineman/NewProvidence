@@ -697,9 +697,15 @@ footer {
 }
 
 .socials li {
-    color: #BDBEC0;
     display: inline;
     padding-right: 20px;
+}
+
+.socials li a {
+    color: #BDBEC0;
+}
+.socials li a:hover {
+    color: #000;
 }
 
 #footer-lists {
