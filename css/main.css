@@ -155,6 +155,7 @@ input:focus {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    cursor: pointer;
 }
 
 .hide-overlay {
@@ -666,10 +667,12 @@ ul {
 
 .f-plan .plan-title {
     padding-top: 68px;
+    transition: all 0.5s;
 }
 
 .pro-plan .plan-title {
     padding-top: 49px;
+    transition: all 0.5s;
 }
 
 #get-started-btn {
