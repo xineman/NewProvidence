@@ -114,6 +114,9 @@ function switchPlan(plan) {
 }
 
 $(document).ready(function() {
+  $("a").click(function(event) {
+    event.preventDefault();
+  })
     $("#navigation-btn").click(function(event) {
         event.preventDefault();
         $("#side-menu").toggleClass("open");
