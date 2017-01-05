@@ -116,7 +116,7 @@ $(document).ready(function() {
         $("#side-menu").addClass("close");
         $("#side-menu").removeClass("open");
     })
-    $('#logo').click(function() {
+    $('#logo').click(function(event) {
         $('html,body').stop().animate({
             scrollTop: 0
         }, 500);
