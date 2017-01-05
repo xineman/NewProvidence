@@ -92,6 +92,7 @@ function plusSlide(n) {
         }
     }
 }
+
 function switchPlan(plan) {
     if (plan == 0) {
         document.getElementById("switcher").className = "leftside";
@@ -105,15 +106,20 @@ function switchPlan(plan) {
 }
 
 $(document).ready(function() {
-  $("#navigation-btn").click(function(event) {
-    event.preventDefault();
-    $("#side-menu").toggleClass("open");
-    $("#side-menu").toggleClass("close");
-  })
-  $("#close-btn").click(function(event) {
-    event.preventDefault();
-    $("#side-menu").addClass("close");
-    $("#side-menu").removeClass("open");
-
-  })
+    $("#navigation-btn").click(function(event) {
+        event.preventDefault();
+        $("#side-menu").toggleClass("open");
+        $("#side-menu").toggleClass("close");
+    })
+    $("#close-btn").click(function(event) {
+        event.preventDefault();
+        $("#side-menu").addClass("close");
+        $("#side-menu").removeClass("open");
+    })
+    $('#logo').click(function(event) {
+        $('html,body').stop().animate({
+            scrollTop: 0
+        }, 500);
+        e.preventDefault();
+    });
 })
