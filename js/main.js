@@ -98,10 +98,18 @@ function switchPlan(plan) {
         document.getElementById("switcher").className = "leftside";
         document.getElementsByClassName("plan-option")[0].classList.add("selected-plan");
         document.getElementsByClassName("plan-option")[1].classList.remove("selected-plan");
+        document.getElementsByClassName("plan")[0].classList.remove("pro-plan");
+        document.getElementsByClassName("plan")[0].classList.add("f-plan");
+        document.getElementsByClassName("plan")[1].classList.remove("f-plan");
+        document.getElementsByClassName("plan")[1].classList.add("pro-plan");
     } else {
         document.getElementById("switcher").className = "rightside";
         document.getElementsByClassName("plan-option")[1].classList.add("selected-plan");
         document.getElementsByClassName("plan-option")[0].classList.remove("selected-plan");
+        document.getElementsByClassName("plan")[1].classList.remove("pro-plan");
+        document.getElementsByClassName("plan")[1].classList.add("f-plan");
+        document.getElementsByClassName("plan")[0].classList.remove("f-plan");
+        document.getElementsByClassName("plan")[0].classList.add("pro-plan");
     }
 }
 
@@ -110,11 +118,14 @@ $(document).ready(function() {
         event.preventDefault();
         $("#side-menu").toggleClass("open");
         $("#side-menu").toggleClass("close");
+        $("#overlay").toggleClass("hide-overlay");
+        $("#overlay").toggleClass("show-overlay");
     })
     $("#close-btn").click(function(event) {
-        event.preventDefault();
-        $("#side-menu").addClass("close");
-        $("#side-menu").removeClass("open");
+        hideMenu(event);
+    })
+    $("#overlay").click(function(event) {
+        hideMenu(event);
     })
     $('#logo').click(function(event) {
         $('html,body').stop().animate({
@@ -123,3 +134,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 })
+
+function hideMenu(event) {
+    event.preventDefault();
+    $("#side-menu").addClass("close");
+    $("#side-menu").removeClass("open");
+    $("#overlay").toggleClass("hide-overlay");
+    $("#overlay").toggleClass("show-overlay");
+}

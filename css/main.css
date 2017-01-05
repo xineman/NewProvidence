@@ -118,16 +118,18 @@ input:focus {
 #side-menu-socials li {
     padding: 10px 0;
 }
+
 #side-menu-footer {
-  position: fixed;
-  width: 320px;
-  bottom: 30px;
+    position: fixed;
+    width: 320px;
+    bottom: 30px;
 }
+
 #side-menu {
     padding: 30px;
     position: fixed;
     background-color: #26272D;
-    z-index: 1000;
+    z-index: 1001;
     height: 100%;
     width: 320px;
     transition: left 0.5s;
@@ -144,6 +146,25 @@ input:focus {
 #close-btn {
     color: #FFF;
     display: inline-block;
+}
+
+#overlay {
+    display: block;
+    background-color: rgb(38, 39, 45);
+    transition: opacity 0.5s;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hide-overlay {
+    height: 0;
+    opacity: 0;
+}
+
+.show-overlay {
+    opacity: 0.5;
+    height: 100%;
 }
 
 #what-happens {
@@ -506,6 +527,7 @@ hr {
 
 #plan-options {
     width: 670px;
+    height: 550px;
     display: flex;
     align-items: center;
 }
@@ -590,6 +612,10 @@ hr {
     font-weight: 700;
 }
 
+.plan {
+    transition: all 0.5s;
+}
+
 .f-plan {
     width: 340px;
     height: 550px;
@@ -602,7 +628,7 @@ hr {
 }
 
 .pro-plan {
-    width: 330px;
+    width: 317px;
     height: 512px;
     text-align: center;
     background-color: #EBEBED;
